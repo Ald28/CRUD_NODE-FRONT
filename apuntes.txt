@@ -1,0 +1,30 @@
+npm init -y
+npm install express
+en package.js "serve": "node index.js"
+ejecutar npm run serve
+
+npm i nodemon -D
+ "dev": "nodemon index.js"
+ npm run dev
+
+npm i mongodb
+npm i mongoose
+
+# Dotenv para manejar variables de entorno (como la URI de MongoDB)
+npm install dotenv
+# Morgan para logging de peticiones HTTP (útil en desarrollo)
+npm install morgan
+# Cors para manejar políticas de seguridad y permitir el acceso desde distintos dominios
+npm install cors
+# bcryptjs para encriptar contraseñas si tienes autenticación
+npm install bcryptjs
+
+myproject/
+├── config/
+│   └── database.js      # Configuración de conexión a MongoDB
+├── models/              # Modelos de MongoDB
+├── routes/              # Rutas de la API
+├── controllers/         # Controladores de las rutas
+├── .env                 # Variables de entorno (como la URI de MongoDB)
+├── index.js             # Punto de entrada principal
+└── package.json

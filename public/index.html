@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Productos</title>
+    <style>
+        /* Estilos generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #3f51b5;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #3f51b5;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos del formulario */
+        #product-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+            gap: 10px;
+        }
+
+        #product-form input[type="text"],
+        #product-form input[type="number"] {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        #product-form button {
+            background-color: #3f51b5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #product-form button:hover {
+            background-color: #2e3a8c;
+        }
+
+        /* Lista de productos */
+        #product-list {
+            list-style: none;
+            width: 100%;
+            max-width: 500px;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        #product-list li {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Botones de acción */
+        #product-list button {
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 0.9em;
+            cursor: pointer;
+            margin-left: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #product-list .edit-button {
+            background-color: #ffb74d;
+            color: #fff;
+        }
+
+        #product-list .edit-button:hover {
+            background-color: #ff9800;
+        }
+
+        #product-list .delete-button {
+            background-color: #e57373;
+            color: #fff;
+        }
+
+        #product-list .delete-button:hover {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>CRUD de Productos</h1>
+    
+    <!-- Formulario para crear y actualizar productos -->
+    <form id="product-form">
+        <input type="hidden" id="product-id">
+        <input type="text" id="product-name" placeholder="Nombre del producto" required>
+        <input type="number" id="product-price" placeholder="Precio del producto" required>
+        <input type="number" id="product-quantity" placeholder="Cantidad del producto" required>
+        <button type="submit">Guardar Producto</button>
+    </form>
+    
+    <h2>Lista de Productos</h2>
+    <ul id="product-list"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
