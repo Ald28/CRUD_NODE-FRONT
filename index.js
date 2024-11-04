@@ -8,7 +8,7 @@ const productRoute = require('./routes/product.route');
 app.use(express.json());
 app.use(express.urlencoded({ extended:false }));
 
-// Servir archivos estáticos desde la carpeta "public"
+// Servir archivos estáticos desde la carpeta "public" ULIMO
 app.use(express.static('public'));
 
 //routes
